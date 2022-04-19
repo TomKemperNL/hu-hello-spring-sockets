@@ -8,9 +8,9 @@ import org.springframework.stereotype.Controller;
 public class MessageController {
 
 
-    @MessageMapping("/hello")
-    @SendTo("/topic/greetings")
-    public Message wut(Message input){
+    @MessageMapping("/new-message")
+    @SendTo("/topic/chat")
+    public Message chat(Message input){
         System.out.println("Hij dut 't!");
         Message output = new Message(input.getSender(), "Output: " + input.getContent());
 
